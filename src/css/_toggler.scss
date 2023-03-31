@@ -1,0 +1,53 @@
+.toggler{
+    position: relative;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    gap: .2em;
+    overflow: hidden;
+    cursor: pointer;
+    .bar-1{
+        position: absolute;
+        height: 2px;
+        background-color: black;
+        width: 20px;
+        transition: all 300ms ease-in-out;
+        top: 0;
+        width: 100%;
+    }
+    .bar-2{
+        @extend .bar-1;
+        top: 8px;
+    }
+    .bar-3{
+        @extend .bar-1;
+        top: 16px;
+    }
+}
+
+.toggler.open{
+    
+    .bar-3{
+        opacity: 0;
+        transition: all 500ms ease-in-out;
+    }
+    .bar-1{
+        transform: rotate(45deg);
+        top: 8px;
+        transition: all 500ms ease-in-out;
+    }
+    .bar-2{
+        transform: rotate(-45deg);
+        transition: all 500ms ease-in-out;
+    }
+}
+
+@media screen and (max-width:600px){
+    .toggler{
+        display: flex;
+    }
+}

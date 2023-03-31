@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@import "./header";
+@import "./landingPage";
+@import "./footer";
+@import "./logo";
+@import "./contact";
+@import "./about";
+@import "./blog/main-blog";
+@import "./toggler";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#root{
+    font-family: 'Poppins', sans-serif;;
+    font-size: 16px;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: .3em .3em;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        box-shadow: 2px 2px 3px 5px #3480eb;
+    }
+
+    .fa-crown{
+        margin-bottom: -.5em;
+        color: #3480eb;
+    }
+    .fa-droplet{
+        margin-right: .2em;
+        font-size: 1.8rem;
+        color: #3480eb;
+    }
+    .logo-water, .logo-prince{
+        font-family: 'Anton', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .logo-water{
+        font-family: 'Alkatra', cursive;
+        color: #3480eb;
+    }
+
+    .nig-ltd{
+        margin-top: -12px;
+        font-weight: 700;
+        width: 100%;
+        @include flex(flex-end);
+        color: #3480eb;
+        // border: 1px solid red;
+    }
+}
+
+@keyframes logo{
+    0%{
+        margin-top: -500px;
+    }
+    50%{
+        margin-top: 0;
+    }
+    75%{
+        margin-top: -15px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
