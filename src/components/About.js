@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 function About() {
+  function scrollToTop() {
+    return window.scroll(0, 0);
+  }
   return (
     <main className="about-page">
       <div className="company-name">
@@ -55,7 +58,11 @@ function About() {
         <p>
           We invite you to explore our website to learn more about our services,
           and please do not hesitate to{" "}
-          <Link to="/contact-us" className="contact-page-link">
+          <Link
+            to="/contact-us"
+            className="contact-page-link"
+            onClick={scrollToTop}
+          >
             contact us
           </Link>{" "}
           if you have any questions or would like to schedule a consultation.
